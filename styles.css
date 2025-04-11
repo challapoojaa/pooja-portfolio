@@ -1,0 +1,543 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* Global reset and font settings */
+* {
+  margin: 0; /* Reset margin for all elements */
+  padding: 0; /* Reset padding for all elements */
+  box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
+  font-family: "Poppins", sans-serif; /* Set font family */
+}
+
+body {
+  min-height: 100vh; /* Ensure body takes up at least the full viewport height */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  background-color: #FFFFFF; /* Set background color */
+}
+
+::selection {
+  color: #000; /* Text color when selected */
+  background: #ffd700; /* Background color when text is selected */
+}
+
+nav {
+  position: fixed; /* Fix the navigation bar to the top */
+  background: #fff; /* Background color */
+  width: 100%; /* Full width */
+  padding: 10px 0; /* Padding for top and bottom */
+  z-index: 12; /* Ensure it is above other elements */
+  transition: 0.3s ease; /* Smooth transition for background color change */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Shadow for navigation bar */
+}
+
+nav.sticky {
+  padding: 10px 0; /* Padding for sticky navigation bar */
+  background: #111; /* Background color for sticky state */
+  transition: 0.3s ease; /* Smooth transition */
+}
+
+nav .navbar {
+  width: 100%; /* Full width */
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Align items vertically */
+  justify-content: space-between; /* Space items out */
+}
+
+nav .logo {
+  font-size: 30px; /* Font size for logo */
+  font-weight: 600; /* Font weight for logo */
+  color: #000; /* Color for logo */
+}
+
+nav .menu {
+  display: flex; /* Flexbox layout for menu items */
+  margin-right: 20px; /* Margin on the right of the menu */
+}
+
+nav .menu li {
+  list-style: none; /* Remove bullet points */
+}
+
+nav .menu li a {
+  display: inline-block; /* Inline-block for menu links */
+  text-decoration: none; /* Remove underline */
+  color: #000; /* Text color for menu links */
+  font-size: 18px; /* Font size for menu links */
+  font-weight: 500; /* Font weight for menu links */
+  margin-left: 25px; /* Margin on the left of menu links */
+  transition: 0.3s ease; /* Smooth transition for color change */
+}
+
+nav .menu li a:hover {
+  color: #ffd700; /* Color change on hover */
+}
+
+nav .cancel-btn,
+nav .menu-btn {
+  display: none; /* Hide cancel and menu buttons */
+}
+
+nav .media-icons {
+  display: flex; /* Flexbox layout for media icons */
+}
+
+nav .media-icons a {
+  display: inline-block; /* Inline-block for media icons */
+  color: #000; /* Text color for media icons */
+  font-size: 18px; /* Font size for media icons */
+  margin-left: 15px; /* Margin on the left of media icons */
+  transition: 0.3s ease; /* Smooth transition for color change */
+}
+
+nav .media-icons a:hover {
+  color: #ffd700; /* Color change on hover */
+}
+
+.home {
+  width: 100%; /* Full width */
+  height: 100vh; /* Full viewport height */
+  display: flex; /* Flexbox layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  background: #FFFFFF; /* Background color */
+  padding-top: 80px; /* Padding on top */
+}
+
+.home-content .text {
+  text-align: center; /* Center text horizontally */
+}
+
+.home-content .text .text-one {
+  font-size: 40px; /* Font size */
+  color: #000000; /* Text color */
+  font-weight: 300; /* Font weight */
+}
+
+.home-content .text .text-two {
+  font-size: 70px; /* Font size */
+  color: #000000; /* Text color */
+  font-weight: 600; /* Font weight */
+  margin: 20px 0; /* Margin top and bottom */
+}
+
+.home-content .text .text-three {
+  font-size: 35px; /* Font size */
+  color: #000000; /* Text color */
+  font-weight: 600; /* Font weight */
+}
+
+.home-content .text .text-four {
+  font-size: 20px; /* Font size */
+  color: #000000; /* Text color */
+  font-weight: 300; /* Font weight */
+  margin-top: 10px; /* Margin on top */
+}
+
+.scroll-button {
+  position: fixed; /* Fix button to bottom */
+  bottom: 20px; /* Distance from bottom */
+  right: 20px; /* Distance from right */
+  height: 45px; /* Height of button */
+  width: 45px; /* Width of button */
+  background: #ffd700; /* Background color */
+  text-align: center; /* Center text */
+  line-height: 45px; /* Align text vertically */
+  border-radius: 50%; /* Round button */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease; /* Smooth transition */
+  display: none; /* Hide button by default */
+  z-index: 99; /* Ensure button is above other elements */
+}
+
+.scroll-button a {
+  font-size: 22px; /* Font size */
+  color: #000; /* Text color */
+}
+
+.scroll-button:hover {
+  background: #fc466b; /* Background color on hover */
+}
+
+.about,
+.skills,
+.services,
+.contact {
+  padding: 100px 0; /* Padding top and bottom */
+  background: #fff; /* Background color */
+  text-align: center; /* Center text */
+}
+
+.about .content,
+.skills .content,
+.services .content,
+.contact .content {
+  max-width: 1200px; /* Maximum width */
+  margin: 0 auto; /* Center content horizontally */
+}
+
+.title span {
+  font-size: 40px; /* Font size */
+  font-weight: 600; /* Font weight */
+}
+
+.about .about-details {
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Align items vertically */
+  margin-top: 40px; /* Margin on top */
+  justify-content: space-around; /* Space items out */
+}
+
+.about .about-details .left img {
+  height: 350px; /* Height of image */
+  width: 350px; /* Width of image */
+  object-fit: cover; /* Cover the element’s content */
+  border-radius: 10%; /* Round image */
+}
+
+.about .about-details .right {
+  width: 650px; /* Width of right section */
+}
+
+.about .about-details .right .topic {
+  font-size: 40px; /* Font size */
+  font-weight: 600; /* Font weight */
+  margin-bottom: 10px; /* Margin on bottom */
+}
+
+.about .about-details .right p {
+  text-align: Center; /* Align text to left */
+}
+
+.about .button {
+  display: flex; /* Flexbox layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  margin-top: 20px; /* Margin on top */
+}
+
+.about .button button {
+  padding: 10px 20px; /* Padding */
+  font-size: 18px; /* Font size */
+  font-weight: 500; /* Font weight */
+  color: #fff; /* Text color */
+  background: #111; /* Background color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.about .button button:hover {
+  background: #fc466b; /* Background color on hover */
+}
+
+.skills-container {
+  display: flex; /* Flexbox layout */
+  justify-content: space-between; /* Space items out */
+}
+
+.skills-details {
+  width: 48%; /* Width of skill details */
+}
+
+.skills-category h3 {
+  font-size: 25px; /* Font size */
+  font-weight: 500; /* Font weight */
+  text-align: left; /* Align text to left */
+  margin-bottom: 20px; /* Margin on bottom */
+}
+
+.skill-bar {
+  margin-bottom: 15px; /* Margin on bottom */
+}
+
+.skill-bar .info {
+  display: flex; /* Flexbox layout */
+  justify-content: space-between; /* Space items out */
+  margin-bottom: 5px; /* Margin on bottom */
+}
+
+.skill-bar .info span {
+  font-weight: 500; /* Font weight */
+}
+
+.progress-line {
+  position: relative; /* Relative positioning */
+  width: 100%; /* Full width */
+  height: 10px; /* Height of progress bar */
+  background: #ddd; /* Background color */
+  border-radius: 5px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow */
+}
+
+.progress-line span {
+  height: 100%; /* Full height */
+  position: absolute; /* Absolute positioning */
+  left: 0; /* Align to the left */
+  top: 0; /* Align to the top */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.progress-line.java span {
+  width: 85%; /* Width of Java progress */
+  background: linear-gradient(135deg, #ffcc33, #ff9966); /* Gradient background */
+}
+
+.progress-line.python span {
+  width: 90%; /* Width of Python progress */
+  background: linear-gradient(135deg, #66ccff, #3399cc); /* Gradient background */
+}
+
+.progress-line.c span {
+  width: 75%; /* Width of C progress */
+  background: linear-gradient(135deg, #3399cc, #0066cc); /* Gradient background */
+}
+
+.progress-line.html span {
+  width: 95%; /* Width of HTML progress */
+  background: linear-gradient(135deg, #ffcc66, #ff9933); /* Gradient background */
+}
+
+.progress-line.react span {
+  width: 70%; /* Width of React progress */
+  background: linear-gradient(135deg, #66ff99, #33cc66); /* Gradient background */
+}
+
+.progress-line.sql span {
+  width: 70%; /* Width of SQL progress */
+  background: linear-gradient(135deg, #66ff99, #33cc66); /* Gradient background */
+}
+
+.progress-line.problem-solving span {
+  width: 70%; /* Width of Problem-Solving progress */
+  background: linear-gradient(135deg, #66ff99, #33cc66); /* Gradient background */
+}
+
+.progress-line.adaptable span {
+  width: 70%; /* Width of Adaptable progress */
+  background: linear-gradient(135deg, #66ff99, #33cc66); /* Gradient background */
+}
+
+.progress-line.team-work span {
+  width: 70%; /* Width of Team-Work progress */
+  background: linear-gradient(135deg, #66ff99, #33cc66); /* Gradient background */
+}
+
+.progress-line.quick-learner span {
+  width: 70%; /* Width of Quick-Learner progress */
+  background: linear-gradient(135deg, #66ff99, #33cc66); /* Gradient background */
+}
+
+.projects-container {
+  display: flex; /* Flexbox layout */
+  flex-wrap: wrap; /* Wrap items */
+  justify-content: space-between; /* Space items out */
+  gap: 20px; /* Gap between items */
+}
+
+.project-card {
+  width: calc(33.333% - 40px); /* Width of each project card, accounting for gap */
+  margin-bottom: 20px; /* Margin on bottom */
+  perspective: 1000px; /* Perspective for 3D effect */
+}
+
+.project-card-inner {
+  position: relative; /* Relative positioning */
+  width: 100%; /* Full width */
+  height: 220px; /* Height of project card */
+  transition: transform 0.6s; /* Smooth transform transition */
+  transform-style: preserve-3d; /* Preserve 3D transformations */
+}
+
+.project-card:hover .project-card-inner {
+  transform: rotateY(180deg); /* Flip on hover */
+}
+
+.project-card-front,
+.project-card-back {
+  position: absolute; /* Absolute positioning */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  backface-visibility: hidden; /* Hide backface when flipped */
+}
+
+.project-card-front {
+  background: #fff; /* Background color */
+  display: flex; /* Flexbox layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  flex-direction: column; /* Column layout */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Shadow */
+}
+
+.project-card-front .icon {
+  font-size: 50px; /* Font size for icon */
+  color: #ffd700; /* Icon color */
+}
+
+.project-card-front .topic {
+  font-size: 20px; /* Font size for topic */
+  font-weight: 600; /* Font weight for topic */
+  margin-top: 10px; /* Margin on top */
+}
+
+.project-card-back {
+  background: #fff; /* Background color */
+  padding: 20px; /* Padding */
+  text-align: center; /* Center text */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Shadow */
+  transform: rotateY(180deg); /* Rotate for back side */
+}
+
+.project-card-back p {
+  font-size: 16px; /* Font size */
+  color: #111; /* Text color */
+  margin: 0; /* Remove margin */
+}
+
+/* Centering the title */
+.title {
+  text-align: center; /* Center text horizontally */
+  margin: 0 auto; /* Center element horizontally */
+  width: 100%; /* Full width */
+  padding: 20px 0; /* Padding top and bottom */
+}
+
+.title span {
+  font-size: 24px; /* Font size */
+  font-weight: bold; /* Font weight */
+  color: #333; /* Text color */
+}
+
+.services .services-content .card {
+  width: 48%; /* Width of service cards */
+  background: #fff; /* Background color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Shadow */
+  overflow: hidden; /* Hide overflow */
+  margin-bottom: 20px; /* Margin on bottom */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.services .services-content .card:hover {
+  transform: translateY(-10px); /* Move up on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+.services .services-content .card .box {
+  padding: 30px; /* Padding inside the card */
+}
+
+.services .services-content .card .box i {
+  font-size: 50px; /* Font size for icon */
+  color: #ffd700; /* Icon color */
+}
+
+.services .services-content .card .box .text {
+  font-size: 22px; /* Font size */
+  font-weight: 600; /* Font weight */
+  color: #111; /* Text color */
+  margin-top: 20px; /* Margin on top */
+}
+
+.services .services-content .card .box p {
+  margin-top: 10px; /* Margin on top */
+  text-align: left; /* Align text to left */
+}
+
+.contact .contact-container {
+  display: flex; /* Flexbox layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+.contact .contact-box {
+  width: 300px; /* Width of contact boxes */
+  background: #fff; /* Background color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Shadow */
+  padding: 20px; /* Padding */
+  text-align: center; /* Center text */
+  margin: 0 10px; /* Margin on sides */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.contact .contact-box:hover {
+  transform: translateY(-10px); /* Move up on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+.contact .contact-box i {
+  font-size: 50px; /* Font size for icon */
+  color: #ffd700; /* Icon color */
+  margin-bottom: 20px; /* Margin on bottom */
+}
+
+.contact .contact-box p {
+  font-size: 18px; /* Font size */
+  color: #111; /* Text color */
+}
+
+.contact .contact-box a {
+  text-decoration: none; /* Remove underline */
+  color: #111; /* Text color */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.contact .contact-box a:hover {
+  color: #fc466b; /* Color change on hover */
+}
+
+footer {
+  background: #111; /* Background color */
+  color: #fff; /* Text color */
+  text-align: center; /* Center text */
+  padding: 20px 0; /* Padding top and bottom */
+}
+
+footer span a {
+  color: #ffd700; /* Link color */
+  text-decoration: none; /* Remove underline */
+}
+
+footer span a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive design for medium screens */
+@media (max-width: 1100px) {
+  .about .about-details,
+  .skills-container,
+  .services .services-content .card {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .skills-details {
+    width: 100%; /* Full width */
+  }
+
+  .services .services-content .card {
+    width: 100%; /* Full width */
+  }
+}
+
+/* Responsive design for small screens */
+@media (max-width: 700px) {
+  .about .about-details .right,
+  .about .about-details .left,
+  .about .about-details .left img {
+    width: 100%; /* Full width */
+    height: auto; /* Auto height */
+  }
+
+  .scroll-button {
+    right: 10px; /* Adjust right position */
+    bottom: 10px; /* Adjust bottom position */
+  }
+
+  .scroll-button a {
+    font-size: 18px; /* Font size for scroll button */
+  }
+}
